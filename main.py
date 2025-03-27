@@ -1,16 +1,25 @@
-# This is a sample Python script.
+import random
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from agent import Agent
 
+# simulation params
+NUM_AGENTS = 100
+NUM_ROUNDS = 50
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    agents = [Agent(i) for i in range(NUM_AGENTS)]
+    print(agents)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    for _ in range(NUM_ROUNDS):
+        random.shuffle(agents) # za random pare
+
+        # vsak agent interacta z enim drugim agentom
+        for i in range(0, NUM_AGENTS, 2):
+            a, b = agents[i], agents[i + 1]
+            a.observe_color(b.color)
+            b.observe_color(a.color)
+
+        for agent in agents:
+            agent.update_color()
+
+    print(agents)
