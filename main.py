@@ -5,7 +5,7 @@ from agent import Agent
 pygame.init()
 
 WIDTH, HEIGHT = 1000, 700
-AGENT_SIZE = 50  # Larger squares
+AGENT_SIZE = 50
 BUTTON_WIDTH, BUTTON_HEIGHT = 150, 50
 NUM_AGENTS = 100
 NUM_ROUNDS = 100
@@ -55,7 +55,10 @@ def draw_buttons():
 
 
 def run_simulation(agents):
-    for round_num in range(NUM_ROUNDS):
+    round_num = 0
+    while True:
+        round_num += 1
+
         for agent in agents:
             observed_agents = random.sample(agents, k=1)
             for other in observed_agents:
@@ -71,9 +74,10 @@ def run_simulation(agents):
         pygame.display.flip()
         clock.tick(FPS)
 
+        # Check if all agents have the same color
         colors = set(agent.color for agent in agents)
         if len(colors) == 1:
-            print(f"Consensus reached at round {round_num + 1}: {colors.pop()}")
+            print(f"Consensus reached at round {round_num}: {colors.pop()}")
             break
 
     print(agents)
