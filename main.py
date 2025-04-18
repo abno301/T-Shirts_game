@@ -1,9 +1,11 @@
 import random
+
 from agent import Agent
 import statistics
+import matplotlib.pyplot as plt
 
 NUM_AGENTS = 100
-NUM_SAMPLES = 1000
+NUM_SAMPLES = 100
 
 
 def create_agents():
@@ -82,6 +84,16 @@ def main():
     results_mean = statistics.mean(results_consensus_with_memory)
 
     print(f"Average consensus reached at round: {results_mean}")
+
+    # result visualisation
+    labels = ['Consensus Learning', 'Consensus with Memory']
+    means = [consensus_learning_mean, results_mean]
+
+    plt.bar(labels, means, color=['skyblue', 'dodgerblue'])
+    plt.ylabel('Average Rounds to Consensus')
+    plt.title('Comparison of Consensus Strategies')
+
+    plt.show()
 
 
 if __name__ == '__main__':
