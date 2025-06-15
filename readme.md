@@ -121,12 +121,14 @@ Programska rešitev predstavlja trdno osnovo za nadaljnje raziskave. Možne smer
 
 ### 6. Viri
 
-Axelrod, R. (1997). The Complexity of Cooperation: Agent-Based Models of Competition and Collaboration. Princeton University Press.
+Shoham, Y., & Tennenholtz, M. (1992). On the emergence of social conventions: modeling, analysis, and simulations. KR'92: Principles of Knowledge Representation and Reasoning, 574-585.
+
+Walker, A., & Wooldridge, M. (1995). Understanding the Emergence of Conventions in Multi-Agent Systems. Proceedings of the First International Conference on Multi-Agent Systems, 384-391.
+
+Wooldridge, M. (2009). Working together. In Introduction to Multiagent Systems (2nd ed.). John Wiley & Sons.
 
 Castellano, C., Fortunato, S., & Loreto, V. (2009). Statistical physics of social dynamics. Reviews of Modern Physics, 81(2), 591–646.
 
 DeGroot, M. H. (1974). Reaching a consensus. Journal of the American Statistical Association, 69(345), 118-121.
 
 Python Software Foundation. Python Language Reference, version 3.x.
-
-Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. Computing in science & engineering, 9(3), 90-95.
