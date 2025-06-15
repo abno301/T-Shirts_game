@@ -253,7 +253,7 @@ def main():
 
     # 2. Box plots for distribution
     boxplot_data = [all_results[name] for name in labels]
-    axes[0, 1].boxplot(boxplot_data, labels=labels)
+    axes[0, 1].boxplot(boxplot_data, tick_labels=labels)
     axes[0, 1].set_ylabel('Rounds to Consensus')
     axes[0, 1].set_title('Distribution of Consensus Rounds')
 
