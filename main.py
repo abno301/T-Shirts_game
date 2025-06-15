@@ -3,6 +3,7 @@ import random
 from agent import Agent
 import statistics
 import matplotlib.pyplot as plt
+import pandas as pd
 
 NUM_AGENTS = 100
 NUM_SAMPLES = 100
@@ -237,7 +238,6 @@ def main():
               f"Efficiency Score: {metrics['Efficiency Score']:.2f}")
 
     # Create DataFrame for all metrics
-    import pandas as pd
     metrics_df = pd.DataFrame(metrics_list)
 
     # Visualization
